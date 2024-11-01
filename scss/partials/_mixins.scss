@@ -1,0 +1,23 @@
+@mixin transition($property_1, $property_2:false, $property_3:false, $property_4:false) {
+  -webkit-transition:$property_1, $property_2, $property_3, $property_4;
+     -moz-transition:$property_1, $property_2, $property_3, $property_4;
+      -ms-transition:$property_1, $property_2, $property_3, $property_4;
+       -o-transition:$property_1, $property_2, $property_3, $property_4;
+          transition:$property_1, $property_2, $property_3, $property_4;
+}
+
+@mixin linear-gradient($color-1, $color-2) {
+  background:-webkit-linear-gradient($color-1, $color-2);
+  background:   -moz-linear-gradient($color-1, $color-2);
+  background:    -ms-linear-gradient($color-1, $color-2);
+  background:     -o-linear-gradient($color-1, $color-2);
+  background:        linear-gradient($color-1, $color-2);
+}
+
+@mixin absolute-center($top:auto, $left:auto) {
+  position:absolute;
+  top:$top;
+  left:$left;
+  -webkit-transform:translate(-50%, -50%);
+  transform:translate(-50%, -50%);
+}

@@ -1,0 +1,170 @@
+/**
+ * SCSS for all alerts
+ */
+
+%alert {
+	width: 100%;
+	padding: 20px;
+	display: inline-block;
+	border-radius: 4px;
+
+	p, &:before {
+		float: left;
+	}
+
+	&:before {
+		width: 25px;
+		height: 25px;
+		margin-right: 10px;
+		display: inline-block;
+		content: '';
+		border-radius: 1000px;
+		background: url('icon-sprite.png') no-repeat;
+	}
+
+	p {
+		color: #fff;
+	}
+}
+
+%alert-small {
+	padding: 10px;
+
+	p {
+		font-size: 12px;
+	}
+
+	&:before {
+		width: 18px;
+		height: 18px;
+	}
+}
+
+%alert-large {
+	padding: 30px;
+
+	p {
+		font-size: 24px;
+	}
+
+	&:before {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+// Success
+.alert-success {
+	background: $alert-green;
+	@extend %alert;
+
+	&:before {
+		background-color: #98bf89;
+		background-position: -47px 7px;
+	}
+}
+
+.alert-success-small {
+	@extend %alert-small;
+	@extend .alert-success;
+
+	&:before {
+		background-position: 4px 5px;
+	}
+}
+
+.alert-success-large {
+	@extend %alert-large;
+	@extend .alert-success;
+
+	&:before {
+		background-position: -89px 13px;
+	}
+}
+
+// Info
+.alert-info {
+	background: $alert-blue;
+	@extend %alert;
+
+	&:before {
+		background-color: #89a1bf;
+		background-position: -47px 7px;
+	}
+}
+
+.alert-info-small {
+	@extend %alert-small;
+	@extend .alert-info;
+
+	&:before {
+		background-position: 4px 5px;
+	}
+}
+
+.alert-info-large {
+	@extend %alert-large;
+	@extend .alert-info;
+
+	&:before {
+		background-position: -89px 13px;
+	}
+}
+
+// Warning
+.alert-warning {
+	background: $alert-yellow;
+	@extend %alert;
+
+	&:before {
+		background-color: #dadb88;
+		background-position: -47px 7px;
+	}
+}
+
+.alert-warning-small {
+	@extend %alert-small;
+	@extend .alert-warning;
+
+	&:before {
+		background-position: 4px 5px;
+	}
+}
+
+.alert-warning-large {
+	@extend %alert-large;
+	@extend .alert-warning;
+
+	&:before {
+		background-position: -89px 13px;
+	}
+}
+
+// Error
+.alert-error {
+	background: $alert-red;
+	@extend %alert;
+
+	&:before {
+		background-color: #c28e95;
+		background-position: -47px 7px;
+	}
+}
+
+.alert-error-small {
+	@extend %alert-small;
+	@extend .alert-error;
+
+	&:before {
+		background-position: 4px 5px;
+	}
+}
+
+.alert-error-large {
+	@extend %alert-large;
+	@extend .alert-error;
+
+	&:before {
+		background-position: -89px 13px;
+	}
+}

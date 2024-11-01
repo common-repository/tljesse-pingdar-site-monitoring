@@ -1,0 +1,191 @@
+/*
+ * General styles shared across the plugin
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+/* line 2, ../scss/1-base/_reset.scss */
+*, *:before, *:after {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0px;
+  font-size: 100%;
+  font: inherit;
+  text-decoration: none;
+}
+
+
+/*------------------------------------*\
+-------- Framework
+\*------------------------------------*/
+/* line 2, ../scss/2-framework/_typography.scss */
+body, input {
+  /*font-family: "Gudea";*/
+  /*font-size: 16px;*/
+  /*background: #e3e3e3;*/
+  /*color: #525252;*/
+  line-height: 100%;
+}
+
+/* line 5, ../scss/2-framework/_typography.scss */
+h1, h1 a,
+h2, h2 a,
+h3, h3 a,
+h4, h4 a,
+h5, h5 a {
+  font-family: "Asap";
+  color: #262626;
+  line-height: 1.200em;
+  margin-bottom: 20px;
+}
+
+/* line 11, ../scss/2-framework/_typography.scss */
+h1 {
+  font-size: 38.08px;
+}
+
+/* line 12, ../scss/2-framework/_typography.scss */
+h2 {
+  font-size: 2.000em;
+}
+
+/* line 13, ../scss/2-framework/_typography.scss */
+h3 {
+  font-size: 25.6px;
+}
+
+/* line 14, ../scss/2-framework/_typography.scss */
+h4 {
+  font-size: 22px;
+}
+
+/* line 15, ../scss/2-framework/_typography.scss */
+h5 {
+  font-size: 17.6px;
+}
+
+/* line 18, ../scss/2-framework/_typography.scss */
+p {
+  /*font-size: 18px;*/
+  line-height: 1.750em;
+}
+
+/* line 19, ../scss/2-framework/_typography.scss */
+p + p {
+  margin-top: 20px;
+}
+
+/* line 21, ../scss/2-framework/_typography.scss */
+ul li, ol li {
+  margin: 10px 0px 10px 40px;
+  font-size: 0.933em;
+  line-height: 1.650em;
+}
+
+/* line 23, ../scss/2-framework/_typography.scss */
+ul + p, ol + p,
+p + h1, p + h2, p + h3, p + h4, p + h5 {
+  margin-top: 30px;
+}
+
+/* line 26, ../scss/2-framework/_typography.scss */
+p + ul, p + ol {
+  margin-top: 10px;
+}
+
+form {
+  .large{
+    padding: 0.6em;
+    border: 1px solid #208992;
+    background-color: #27a4b0;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 1em;
+  }
+}
+
+button {
+  padding: 0.6em;
+  border: 1px solid #208992;
+  background-color: $pingdar-green;
+  color: $white;
+
+  &.large {
+    font-size: 24px;
+    text-transform: uppercase;  
+    padding: 1em;
+  }
+
+  &:hover {
+    background-color: $pingdar-hover;
+    cursor: pointer;
+    @include transition(color, linear, 0.3s);
+  }
+
+  &:disabled, &[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+
+    &:hover {
+      cursor: default;
+      background-color: #cccccc;
+    }
+  }
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url("./fonts/fontawesome-webfont.eot");
+  src: url("./fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/fontawesome-webfont.woff") format("woff"), url("./fonts/fontawesome-webfont.ttf?") format("truetype"), url("./fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sidebar-module {
+  margin-bottom: 20px;
+}
+
+.list-unstyled {
+  list-style: none;
+
+  li {
+    margin-left: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  //max-width: 1000px;
+  margin: 0px auto;
+}
+
+.stacked {
+  display: block;
+}
+
+.text-centered {
+  text-align: center;
+  p {
+    text-align: center;
+  }
+}
+
+span.cloze {
+  font-weight: bold;
+  color: blue;
+}
+
+.hidden {
+  display: none;
+}
+
+.alert {
+  color: $red;
+}

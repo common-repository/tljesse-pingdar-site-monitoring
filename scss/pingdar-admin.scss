@@ -1,0 +1,137 @@
+/**
+ * Pingdar Site Monitoring uses SASS for stylesheets
+ */
+
+@import "partials/extends";
+
+@import "partials/mixins";
+
+@import "partials/variables";
+
+@import "partials/grid";
+
+@import "partials/alert";
+
+@import "partials/general";
+
+@import "partials/icons";
+
+.pingdar-wrap {
+	.pingdar-header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.failed-signin {
+		width: 48.5%;
+		margin-bottom: 1em;
+	}
+	h2 {
+		//color: $pingdar-green;
+	}
+
+	ul {
+		&.activate-bullets {
+			list-style-type: disc;
+		}
+	}
+
+	button {
+		&#pingdar-profile {
+			float: right;
+		}
+	}
+
+	#update {
+		margin: 0 10em;
+	}
+}
+
+.register, .signin, .update {
+	background-color: $white;//#eceef1;
+	padding: 1em;
+
+	h2 {
+		//color: $pingdar-green;
+		margin-top: 0.5em;
+	}
+
+	form {
+		fieldset {
+			margin-bottom: 1em;
+
+			input, select {
+				padding: 0 10px;
+				//border: 1px solid #dde3ec;
+				//color: #8290a3;
+				//background-color: #dde3ec;
+				height: 35px;
+				margin-bottom: 10px;
+				-webkit-appearance: none;
+			}
+		}
+	}
+
+	.mobile {
+		
+		input {
+			display: inline;
+			width: 50%;
+			&[type=number] {
+				&::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+					-webkit-appearance: none;
+					margin: 0
+				}
+			}
+		}
+
+		select {
+			display: inline;
+			width: 30%;
+		}
+	}
+
+	.switch {
+		button {
+		  /*padding: 0.6em;
+		  border: none;
+		  background-color: transparent;
+		  color: $pingdar-green;*/
+
+		  &:hover {
+		    background-color: transparent;
+		    color: $pingdar-hover;
+		    cursor: pointer;
+		    @include transition(color, linear, 0.3s);
+		  }
+		}
+	}
+}
+
+#updateForm {
+	select, input {
+		width: 100%;
+	}
+
+	.mobile {
+		select {
+			width: 30%;
+			float: left;
+		}
+
+		input {
+			width: 67%;
+			float: right;
+		}
+	}
+}
+
+#fullwidth, .fullwidth {
+	width: 100%;
+}
+
+.text-right {
+	text-align: right;
+}
+

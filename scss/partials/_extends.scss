@@ -1,0 +1,42 @@
+%clearfix:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+%inline-list {
+	padding-top: 0px;
+	@extend %clearfix;
+
+	li {
+		margin-right: 30px;
+		float: left;
+		list-style: none;
+
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
+}
+
+%remove-text {
+	overflow: hidden;
+	text-indent: -99999px;
+}
+
+%inline-form {
+	@extend %clearfix;
+
+	input, .btn {
+		float: left;
+	}
+
+	input {
+		border-right: none;
+		border-radius: 3px 0px 0px 3px;
+	}
+
+	.btn {
+		border-radius: 0px 3px 3px 0px;
+	}
+}
